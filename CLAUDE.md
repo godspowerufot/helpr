@@ -1,0 +1,2 @@
+@AGENTS.md
+@docs/IMPLEMENTATION_GUIDE.md

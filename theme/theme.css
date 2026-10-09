@@ -1,0 +1,456 @@
+@import 'tailwindcss';
+
+/* Monochrome glass across the app (ADR 0026); Quorvix type scale (ADR 0020). */
+:root {
+  --canvas: #f7f8fa;
+  --ink: #111318;
+  --glass: #ffffff;
+  --swirl-1: #ffffff;
+  --swirl-2: #e6e8ef;
+  --swirl-3: #c3c7d4;
+  --swirl-4: #b4b8c6;
+
+  --surface: rgb(255 255 255 / 0.6);
+  --background: var(--canvas);
+  --background-light: rgb(17 19 24 / 0.04);
+  --stroke: #11131826;
+  --stroke-light: #11131814;
+  --text: var(--ink);
+  --text-light: #111318b3;
+  --disabled: #63656d;
+  --primary: var(--ink);
+  --primary-light: #e6e8ef;
+  --primary-dark: #2b2e36;
+  --secondary: #63656d;
+  --secondary-light: #e6e8ef;
+  --secondary-dark: var(--ink);
+  --tertiary: #81a196;
+  --tertiary-light: #e1f8f0;
+  --tertiary-dark: #a4997d;
+  --success: #1f8a3f;
+  --success-light: #e1f8f0;
+  --warning: #a4997d;
+  --warning-light: #fff7e5;
+  --error: #d4294f;
+  --info-light: #e8ebf2;
+  --neutral: var(--ink);
+  --on-primary: #ffffff;
+  --scrim: linear-gradient(to top, rgb(0 0 0 / 0.72), rgb(0 0 0 / 0) 60%);
+  --card-banner: linear-gradient(
+    115deg,
+    var(--ink) 35%,
+    color-mix(in srgb, var(--swirl-4) 45%, var(--ink))
+  );
+
+  /* --font-geist and --font-instrument-serif are set on <html> by next/font (ADR 0023, 0026). */
+  --font-app-font:
+    var(--font-geist), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-secondary-font: var(--font-app-font);
+  --font-serif: var(--font-instrument-serif), Georgia, serif;
+
+  /* h1–h4 and display use the serif (one weight, 400); h5 and below stay Geist. */
+  --heading-1-r: 400 clamp(2.5rem, 2.5vw + 1.75rem, 3.5rem) / 1.04
+    var(--font-serif);
+  --heading-1-b: var(--heading-1-r);
+  --heading-1-m: var(--heading-1-r);
+
+  --heading-2-r: 400 clamp(2.25rem, 1.5vw + 1.75rem, 2.75rem) / 1.08
+    var(--font-serif);
+  --heading-2-b: var(--heading-2-r);
+  --heading-2-m: var(--heading-2-r);
+
+  --heading-3-r: 400 2rem / 1.1 var(--font-serif);
+  --heading-3-b: var(--heading-3-r);
+  --heading-3-m: var(--heading-3-r);
+
+  --heading-4-r: 400 2rem / 1.1 var(--font-serif);
+  --heading-4-b: var(--heading-4-r);
+  --heading-4-m: var(--heading-4-r);
+
+  --heading-5-b: 600 1.125rem / 1.5 var(--font-app-font); /* 18px */
+  --heading-5-m: var(--heading-5-b);
+  --heading-5-r: 400 1.125rem / 1.5 var(--font-app-font);
+
+  --heading-6-b: 600 0.875rem / 1.5 var(--font-app-font); /* 14px */
+  --heading-6-m: var(--heading-6-b);
+  --heading-6-r: 400 0.875rem / 1.5 var(--font-app-font);
+
+  --body-1-b: 600 1.125rem / 1.5 var(--font-app-font); /* 18px */
+  --body-1-m: var(--body-1-b);
+  --body-1-r: 400 1.125rem / 1.5 var(--font-app-font);
+
+  --body-2-b: 600 0.875rem / 1.5 var(--font-app-font); /* 14px */
+  --body-2-m: var(--body-2-b);
+  --body-2-r: 400 0.875rem / 1.5 var(--font-app-font);
+
+  --footer-1-b: 600 0.75rem / 1.5 var(--font-app-font); /* 12px */
+  --footer-1-m: var(--footer-1-b);
+  --footer-1-r: 400 0.75rem / 1.5 var(--font-app-font);
+
+  --footer-2-b: var(--footer-1-b);
+  --footer-2-m: var(--footer-1-m);
+  --footer-2-r: var(--footer-1-r);
+
+  --display-1: 400 clamp(2.5rem, 5vw + 1rem, 5rem) / 1.04 var(--font-serif);
+  --display-2: 400 clamp(2.25rem, 2.5vw + 1.25rem, 3.25rem) / 1.08
+    var(--font-serif);
+
+  --space-md: 8px;
+
+  --shadow-sm: 0 1px 2px 0 rgb(17 19 24 / 0.04);
+  --shadow-md: 0 10px 28px rgb(17 19 24 / 0.06);
+  --shadow-lg: 0 16px 40px rgb(17 19 24 / 0.08);
+  --shadow-xl: 0 24px 56px rgb(17 19 24 / 0.1);
+
+  --app-radius: 16px;
+  --button-radius: 9999px;
+  --input-radius: 12px;
+
+  --duration-fast: 150ms;
+  --duration-base: 200ms;
+  --duration-slow: 300ms;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-light: var(--background-light);
+  --color-surface: var(--surface);
+  --color-text: var(--text);
+  --color-text-light: var(--text-light);
+  --color-stroke: var(--stroke);
+  --color-stroke-light: var(--stroke-light);
+  --color-disabled: var(--disabled);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary: var(--secondary);
+  --color-secondary-light: var(--secondary-light);
+  --color-secondary-dark: var(--secondary-dark);
+  --color-tertiary: var(--tertiary);
+  --color-tertiary-light: var(--tertiary-light);
+  --color-tertiary-dark: var(--tertiary-dark);
+  --color-success: var(--success);
+  --color-success-light: var(--success-light);
+  --color-warning: var(--warning);
+  --color-warning-light: var(--warning-light);
+  --color-error: var(--error);
+  --color-info-light: var(--info-light);
+  --color-neutral: var(--neutral);
+  --color-on-primary: var(--on-primary);
+  --font-primary: var(--font-app-font);
+
+  --radius-app-radius: var(--app-radius);
+  --radius-btn-radius: var(--button-radius);
+  --radius-input-radius: var(--input-radius);
+
+  /* Quorvix class names, so the design-system docs can be followed as written. */
+  --color-brand-primary: var(--primary);
+  --color-brand-light: var(--primary-light);
+  --color-black-100: #111318;
+  --color-black-80: #111318cc;
+  --color-black-40: #11131866;
+  --color-black-20: #11131833;
+  --color-black-10: #1113181a;
+  --color-black-5: #1113180d;
+  --color-white-100: #ffffff;
+  --color-gray-light: #e8e8e8;
+  --color-gray-medium: #63626a;
+  --color-secondary-light-blue: var(--info-light);
+  --color-secondary-cream: var(--warning-light);
+  --color-secondary-tan: #a4997d;
+  --color-secondary-mint: var(--success-light);
+  --color-secondary-sage: #81a196;
+
+  /* Quorvix spacing xs–xxl is Tailwind's default 4 px scale: 1, 2, 4, 6, 8, 12.
+     Named --spacing-* keys would also redefine max-w-md, w-sm, etc. */
+  --radius-base: 4px;
+  --radius-standard: 8px;
+  --radius-card: 12px;
+  --radius-modal: 16px;
+
+  --color-canvas: var(--canvas);
+  --color-ink: var(--ink);
+  --color-glass: var(--glass);
+  --font-display: var(--font-serif);
+}
+
+/* Same values as the :root shadows, which MUI reads. */
+@theme {
+  --shadow-sm: 0 1px 2px 0 rgb(17 19 24 / 0.04);
+  --shadow-md: 0 10px 28px rgb(17 19 24 / 0.06);
+  --shadow-lg: 0 16px 40px rgb(17 19 24 / 0.08);
+  --shadow-xl: 0 24px 56px rgb(17 19 24 / 0.1);
+  --shadow-glass: 0 10px 28px rgb(17 19 24 / 0.06);
+}
+
+@layer components {
+  .h1-b {
+    font: var(--heading-1-b);
+  }
+  .h1-m {
+    font: var(--heading-1-m);
+  }
+  .h1-r {
+    font: var(--heading-1-r);
+  }
+
+  .h2-b {
+    font: var(--heading-2-b);
+  }
+  .h2-m {
+    font: var(--heading-2-m);
+  }
+  .h2-r {
+    font: var(--heading-2-r);
+  }
+
+  .h3-b {
+    font: var(--heading-3-b);
+  }
+  .h3-m {
+    font: var(--heading-3-m);
+  }
+  .h3-r {
+    font: var(--heading-3-r);
+  }
+
+  .h4-b {
+    font: var(--heading-4-b);
+  }
+  .h4-m {
+    font: var(--heading-4-m);
+  }
+  .h4-r {
+    font: var(--heading-4-r);
+  }
+
+  .h5-b {
+    font: var(--heading-5-b);
+  }
+  .h5-m {
+    font: var(--heading-5-m);
+  }
+  .h5-r {
+    font: var(--heading-5-r);
+  }
+
+  .h6-b {
+    font: var(--heading-6-b);
+  }
+  .h6-m {
+    font: var(--heading-6-m);
+  }
+  .h6-r {
+    font: var(--heading-6-r);
+  }
+
+  .b1-b {
+    font: var(--body-1-b);
+  }
+  .b1-m {
+    font: var(--body-1-m);
+  }
+  .b1-r {
+    font: var(--body-1-r);
+  }
+
+  .b2-b {
+    font: var(--body-2-b);
+  }
+  .b2-m {
+    font: var(--body-2-m);
+  }
+  .b2-r {
+    font: var(--body-2-r);
+  }
+
+  .f1-b {
+    font: var(--footer-1-b);
+  }
+  .f1-m {
+    font: var(--footer-1-m);
+  }
+  .f1-r {
+    font: var(--footer-1-r);
+  }
+
+  .f2-b {
+    font: var(--footer-2-b);
+  }
+  .f2-m {
+    font: var(--footer-2-m);
+  }
+  .f2-r {
+    font: var(--footer-2-r);
+  }
+
+  .d1 {
+    font: var(--display-1);
+    letter-spacing: -0.01em;
+  }
+
+  .d2 {
+    font: var(--display-2);
+    letter-spacing: -0.01em;
+  }
+}
+
+html {
+  color-scheme: light;
+  touch-action: manipulation;
+  scroll-padding-top: 6.5rem;
+  background: var(--canvas);
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (pointer: fine) {
+  html {
+    overscroll-behavior: none;
+  }
+}
+
+body {
+  color: var(--text);
+  font-family: var(--font-app-font);
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--glass);
+}
+
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+/* Landing page only: full-screen sections snap (ADR 0024). */
+html:has(.helpr-landing) {
+  scroll-snap-type: y proximity;
+  scroll-padding-top: 0;
+}
+
+.l-h1 {
+  font:
+    400 clamp(2.5rem, 5vw + 1rem, 5rem) / 1.04 var(--font-instrument-serif),
+    Georgia,
+    serif;
+  letter-spacing: -0.01em;
+}
+
+.l-h2 {
+  font:
+    400 clamp(2.25rem, 2.5vw + 1.25rem, 3.25rem) / 1.08
+      var(--font-instrument-serif),
+    Georgia,
+    serif;
+  letter-spacing: -0.01em;
+}
+
+.l-h3 {
+  font:
+    400 1.625rem / 1.1 var(--font-instrument-serif),
+    Georgia,
+    serif;
+}
+
+.l-num {
+  font:
+    400 2.5rem / 1 var(--font-instrument-serif),
+    Georgia,
+    serif;
+}
+
+.l-marquee {
+  font:
+    400 clamp(3.5rem, 6vw + 1rem, 5.25rem) / 1.1 var(--font-instrument-serif),
+    Georgia,
+    serif;
+}
+
+.l-reveal {
+  transition:
+    opacity 0.9s ease-out,
+    transform 0.9s ease-out,
+    filter 0.9s ease-out;
+}
+
+.l-reveal[data-reveal='hidden'] {
+  opacity: 0;
+  transform: translateY(40px);
+  filter: blur(8px);
+}
+
+.l-mark {
+  background:
+    radial-gradient(circle at 32% 28%, rgb(255 255 255 / 0.9), transparent 28%),
+    conic-gradient(
+      from 210deg,
+      var(--ink),
+      var(--swirl-4) 22%,
+      var(--ink) 48%,
+      var(--swirl-3) 70%,
+      var(--ink)
+    );
+}
+
+.l-marquee-mask {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 12%,
+    black 88%,
+    transparent
+  );
+}
+
+@keyframes l-marquee {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.l-marquee-track {
+  animation: l-marquee 36s linear infinite;
+}
+
+.l-marquee-mask:hover .l-marquee-track {
+  animation-play-state: paused;
+}
+
+.l-menu {
+  clip-path: circle(0% at calc(100% - 2.75rem) 2.75rem);
+  visibility: hidden;
+  transition:
+    clip-path 0.6s ease-out,
+    visibility 0s linear 0.6s;
+}
+
+.l-menu[data-open='true'] {
+  clip-path: circle(150% at calc(100% - 2.75rem) 2.75rem);
+  visibility: visible;
+  transition:
+    clip-path 0.6s ease-out,
+    visibility 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .l-reveal[data-reveal='hidden'] {
+    transform: none;
+    filter: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

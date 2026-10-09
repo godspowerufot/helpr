@@ -1,0 +1,100 @@
+/**
+ * Quorvix Admin Design System - Tailwind CSS v4 Theme
+ * 
+ * This file contains design tokens for Tailwind CSS v4 using the @theme directive.
+ * Add this to your globals.css file or import it.
+ */
+
+@theme {
+    /* ==================== Colors - Black ==================== */
+    --color-black: #1E1E1E;
+    --color-black-80: #1C1C1CCC;
+    --color-black-40: #1C1C1C66;
+    --color-black-20: #1C1C1C33;
+    --color-black-10: #1C1C1C1A;
+    --color-black-5: #1C1C1C0D;
+
+    /* ==================== Colors - White ==================== */
+    --color-white-100: #FFFFFF;
+    --color-white-80: rgba(255, 255, 255, 0.8);
+    --color-white-40: rgba(255, 255, 255, 0.4);
+    --color-white-20: rgba(255, 255, 255, 0.2);
+    --color-white-10: rgba(255, 255, 255, 0.1);
+    --color-white-5: rgba(255, 255, 255, 0.05);
+
+    /* ==================== Colors - Primary ==================== */
+    --color-brand-primary: #09858D;
+    --color-brand-light: #D8F0F1;
+    --color-gray-light: #8F8F8F;
+    --color-gray-medium: #D2CFCF;
+    --color-gray-active: #E8E8E8;
+
+    /* ==================== Colors - Secondary ==================== */
+    --color-secondary: #F3F3F3;
+    --color-secondary-slate: #6C6B71;
+    --color-secondary-cream: #FFF7E5;
+    --color-secondary-tan: #A4997D;
+    --color-secondary-mint: #E1F8F0;
+    --color-secondary-sage: #81A196;
+
+    /* ==================== Colors - Semantic ==================== */
+    --color-success: #34C759;
+    --color-error: #F94E72;
+
+    /* ==================== Spacing ==================== */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-xxl: 48px;
+
+    /* ==================== Typography ==================== */
+    --font-family-primary: var(--font-gilroy), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-md: 18px;
+    --font-size-lg: 24px;
+    --font-size-xl: 32px;
+    --font-size-xxl: 48px;
+
+    --font-weight-regular: 400;
+    --font-weight-semibold: 600;
+
+    /* ==================== Border Radius ==================== */
+    --radius-base: 4px;
+    --radius-standard: 8px;
+    --radius-card: 12px;
+    --radius-modal: 16px;
+    --radius-container: 20px;
+    --radius-xl: 12px;
+    --radius-2xl: 16px;
+    --radius-3xl: 24px;
+    --radius-full: 9999px;
+    /* ==================== Shadows ==================== */
+    --shadow-sm: 0 1px 2px 0 rgba(28, 28, 28, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(28, 28, 28, 0.1), 0 2px 4px -1px rgba(28, 28, 28, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(28, 28, 28, 0.1), 0 4px 6px -2px rgba(28, 28, 28, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(28, 28, 28, 0.1), 0 10px 10px -5px rgba(28, 28, 28, 0.04);
+
+    /* ==================== Transitions ==================== */
+    --transition-duration-fast: 150ms;
+    --transition-duration-base: 200ms;
+    --transition-duration-slow: 300ms;
+
+    /* ==================== Z-Index ==================== */
+    --z-index-dropdown: 1000;
+    --z-index-sticky: 1020;
+    --z-index-fixed: 1030;
+    --z-index-modal-backdrop: 1040;
+    --z-index-modal: 1050;
+    --z-index-popover: 1060;
+    --z-index-tooltip: 1070;
+}
+
+/* ==================== Base Styles ==================== */
+body {
+    font-family: var(--font-family-primary);
+    color: var(--color-black-100);
+}
