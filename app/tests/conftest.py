@@ -39,7 +39,7 @@ engine = create_engine(
 # These two event listeners are only needed for sqlite for proper
 # SAVEPOINT / nested transaction support. Other databases like postgres
 # don't need them.
-# From: https://docs.sqlalchemy.org/en/14/dialects/sqlite.html#serializable-isolation-savepoints-transactional-ddl  # noqa: E501
+# From: https://docs.sqlalchemy.org/en/14/dialects/sqlite.html#serializable-isolation-savepoints-transactional-ddl
 # @sa.event.listens_for(engine, "connect")
 # def do_connect(dbapi_connection, connection_record):
 #     # disable pysqlite's emitting of the BEGIN statement entirely.
@@ -147,3 +147,43 @@ def faker() -> Faker:
 @pytest.fixture(scope="function")
 def mock_send_email(mocker):
     return mocker.patch("msflib.services.email.send_email", return_value=None)
+
+
+SEED_FILE = Path(__file__).resolve().parents[1] / "seed" / "data" / "marketplace.json"
+
+
+@pytest.fixture(scope="function")
+def marketplace(session: Session) -> Session:
+    import json
+
+    from msflib.seed.schema import ConfigSchema
+
+    from app.seed.seeders import MarketplaceSeeder
+
+    records = json.loads(SEED_FILE.read_text())
+    records[0]["password"] = SEED_PASSWORD
+    MarketplaceSeeder(
+        ConfigSchema(
+            name="marketplace",
+            seeder_class="app.seed.seeders.MarketplaceSeeder",
+            records=records,
+        )
+    ).seed(session, {})
+    return session
+
+
+SEED_PASSWORD = "test-password-123"
+
+
+@pytest.fixture(scope="function")
+def login(client: TestClient):
+    """Bearer headers for a seeded marketplace account."""
+
+    def _login(email: str) -> dict[str, str]:
+        r = client.post(
+            f"{settings.API_V1_STR}/login", data={"username": email, "password": SEED_PASSWORD}
+        )
+        assert r.status_code == 200, r.text
+        return {"Authorization": f"Bearer {r.json()['access_token']}"}
+
+    return _login

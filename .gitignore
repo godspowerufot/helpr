@@ -18,5 +18,7 @@ uploads
 .vscode/
 tmp/
 
-# Built documentation
-doc-site/
+# Local-only: npm token, SQLite database and its backups
+.npmrc
+*.db
+*.db.bak-*

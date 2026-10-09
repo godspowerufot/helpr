@@ -22,6 +22,14 @@
 # - seeder_class: A custom seeder class used for complex seeding logic.
 
 seeders:
+  # Helpr demo marketplace. Run alone with:
+  #   python -m app.seed.runner --seeders marketplace --yes
+  # Needs SEED_ACCOUNT_PASSWORD in .env (password for every seeded account).
+  marketplace:
+    name: marketplace
+    seeder_class: app.seed.seeders.MarketplaceSeeder
+    records: marketplace.json
+
   # Base account records. Child seeders can depend on this by name.
   accounts:
     name: accounts

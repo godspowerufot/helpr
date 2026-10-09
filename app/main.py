@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from msflib.eventbus import bind_app_emitter
 from starlette.middleware.cors import CORSMiddleware
+from starlette.middleware.sessions import SessionMiddleware
 
 from .api.api_v1.api import api_router
 from .bootstrap import bootstrap_module_hooks
@@ -20,6 +21,9 @@ if settings.BACKEND_CORS_ORIGINS:
         allow_methods=["*"],
         allow_headers=["*"],
     )
+
+# MSFLib's `/google/login` (authlib `authorize_redirect`) keeps the OAuth state in the session.
+app.add_middleware(SessionMiddleware, secret_key=settings.SECRET_KEY, same_site="lax")
 
 app.include_router(api_router, prefix=settings.API_V1_STR)
 

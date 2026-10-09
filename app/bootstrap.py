@@ -3,6 +3,7 @@ from msflib.workspaces.eventbus import register_event_hooks
 
 from .actions import account_action, user_action, workspace_action
 from .core.config import settings
+from .eventbus import register_helpr_listeners
 
 _hooks_registered = False
 
@@ -20,4 +21,5 @@ def bootstrap_module_hooks(emitter: AppEmitter) -> None:
             emitter=emitter,
             tenancy_settings=settings.scope("TENANCY"),
         )
+    register_helpr_listeners(emitter)
     _hooks_registered = True

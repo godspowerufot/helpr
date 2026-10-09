@@ -1,0 +1,227 @@
+[
+  {
+    "password": "${SEED_ACCOUNT_PASSWORD}",
+    "categories": [
+      { "slug": "cleaning", "name": "Cleaning", "icon": "broom" },
+      { "slug": "plumbing", "name": "Plumbing", "icon": "pipe" },
+      { "slug": "electrical", "name": "Electrical", "icon": "bolt" },
+      { "slug": "hair-beauty", "name": "Hair & Beauty", "icon": "scissors" },
+      { "slug": "moving", "name": "Moving", "icon": "truck" },
+      { "slug": "tutoring", "name": "Tutoring", "icon": "book" },
+      { "slug": "private-chef", "name": "Private Chef", "icon": "chef" },
+      { "slug": "domestic-help", "name": "Domestic Help", "icon": "home" },
+      { "slug": "laundry", "name": "Laundry & Ironing", "icon": "shirt" },
+      { "slug": "carpentry", "name": "Carpentry", "icon": "hammer" },
+      { "slug": "painting", "name": "Painting", "icon": "brush" },
+      { "slug": "ac-repair", "name": "AC Repair", "icon": "snowflake" }
+    ],
+    "customers": [
+      { "email": "chiamaka@example.com", "username": "chiamaka", "phone": "+2348030000001", "first_name": "Chiamaka", "last_name": "Eze" },
+      { "email": "ifeoluwa@example.com", "username": "ifeoluwa", "phone": "+2348030000002", "first_name": "Ifeoluwa", "last_name": "Adebayo" },
+      { "email": "bola@example.com", "username": "bola", "phone": "+2348030000003", "first_name": "Bola", "last_name": "Sanni" },
+      { "email": "emeka@example.com", "username": "emeka", "phone": "+2348030000004", "first_name": "Emeka", "last_name": "Nwosu" },
+      { "email": "halima@example.com", "username": "halima", "phone": "+2348030000005", "first_name": "Halima", "last_name": "Yusuf" },
+      { "email": "segun@example.com", "username": "segun", "phone": "+2348030000006", "first_name": "Segun", "last_name": "Ojo" },
+      { "email": "ngozi@example.com", "username": "ngozi", "phone": "+2348030000007", "first_name": "Ngozi", "last_name": "Uche" },
+      { "email": "temi@example.com", "username": "temi", "phone": "+2348030000008", "first_name": "Temi", "last_name": "Bello" },
+      { "email": "funke@example.com", "username": "funke", "phone": "+2348030000009", "first_name": "Funke", "last_name": "Adeyemi" },
+      { "email": "david@example.com", "username": "david", "phone": "+2348030000010", "first_name": "David", "last_name": "Ibe" }
+    ],
+    "providers": [
+      {
+        "slug": "sparkle-home",
+        "display_name": "Sparkle Home Services",
+        "bio": "A four-person team doing deep cleans, move-out cleans and weekly upkeep across Eket since 2019. We bring our own supplies.",
+        "service_area": "Grace Bill Road, Eket Town, Afaha Eket",
+        "phone": "+2348031234501",
+        "latitude": 4.6478,
+        "longitude": 7.9268,
+        "owner": { "email": "sparkle@example.com", "username": "sparkle", "first_name": "Amaka", "last_name": "Obi" },
+        "listings": [
+          { "key": "deep-clean", "category": "cleaning", "status": "published", "title": "Deep Clean, 3-Bedroom Apartment", "description": "Kitchen degrease, bathrooms descaled, floors mopped, windows inside, wardrobes wiped. Two cleaners, supplies included.", "pricing_type": "fixed", "price_amount": 2500000, "duration_minutes": 300, "service_area": "Eket Town, Grace Bill Road" },
+          { "key": "weekly-upkeep", "category": "cleaning", "status": "published", "title": "Weekly Home Upkeep", "description": "Dusting, laundry folding, kitchen and bathroom wipe-down. Billed per hour, three-hour minimum.", "pricing_type": "hourly", "price_amount": 400000, "duration_minutes": 180, "service_area": "Eket Town, Afaha Eket" },
+          { "key": "post-construction", "category": "cleaning", "status": "draft", "title": "Post-Construction Clean", "description": "Dust and paint-splash removal after renovation work. Quote confirmed on site.", "pricing_type": "fixed", "price_amount": 6000000, "duration_minutes": 480, "service_area": "Eket Town" }
+        ]
+      },
+      {
+        "slug": "tunde-plumbing",
+        "display_name": "Tunde Fixes Plumbing",
+        "bio": "Licensed plumber. Leaks, blocked drains, water heaters and bathroom fittings. Same-day call-outs anywhere in Eket.",
+        "service_area": "Marina Road, Eket Town, Idua",
+        "phone": "+2348031234502",
+        "latitude": 4.6392,
+        "longitude": 7.9318,
+        "owner": { "email": "tunde@example.com", "username": "tunde", "first_name": "Tunde", "last_name": "Bakare" },
+        "listings": [
+          { "key": "leak-repair", "category": "plumbing", "status": "published", "title": "Leak Repair and Call-Out", "description": "Find and fix leaking pipes, taps or cisterns. Price covers call-out and the first hour; parts billed at cost.", "pricing_type": "fixed", "price_amount": 1500000, "duration_minutes": 60, "service_area": "Marina Road, Eket Town" },
+          { "key": "water-heater", "category": "plumbing", "status": "published", "title": "Water Heater Installation", "description": "Install or replace a wall-mounted water heater, including fittings and pressure test.", "pricing_type": "fixed", "price_amount": 3500000, "duration_minutes": 180, "service_area": "Eket Town, Idua" }
+        ]
+      },
+      {
+        "slug": "brightwire-electric",
+        "display_name": "Brightwire Electrical",
+        "bio": "Wiring, inverter installs, fault finding and prepaid meter setup. Safety-first, with written quotes before work starts.",
+        "service_area": "Eket-Oron Road, Ikot Udota, Esit Eket",
+        "phone": "+2348031234503",
+        "latitude": 4.6262,
+        "longitude": 7.9455,
+        "owner": { "email": "brightwire@example.com", "username": "brightwire", "first_name": "Kunle", "last_name": "Afolabi" },
+        "listings": [
+          { "key": "inverter", "category": "electrical", "status": "published", "title": "Inverter and Battery Installation", "description": "Install a 3.5 kVA inverter with batteries and a changeover. You supply the equipment; we wire and test it.", "pricing_type": "fixed", "price_amount": 4500000, "duration_minutes": 240, "service_area": "Ikot Udota, Eket-Oron Road" },
+          { "key": "fault-finding", "category": "electrical", "status": "published", "title": "Electrical Fault Finding", "description": "Tripping breakers, dead sockets or flickering lights traced and fixed. Billed hourly.", "pricing_type": "hourly", "price_amount": 800000, "duration_minutes": 60, "service_area": "Eket Town, Esit Eket" }
+        ]
+      },
+      {
+        "slug": "kemi-braids",
+        "display_name": "Kemi Braids & Beauty",
+        "bio": "Home-service braids, cornrows, wig installs and makeup for events. Products included on request.",
+        "service_area": "Atabong Road, Eket Town, Okon",
+        "phone": "+2348031234504",
+        "latitude": 4.6531,
+        "longitude": 7.9171,
+        "owner": { "email": "kemi@example.com", "username": "kemi", "first_name": "Kemi", "last_name": "Lawal" },
+        "listings": [
+          { "key": "knotless-braids", "category": "hair-beauty", "status": "published", "title": "Knotless Braids at Home", "description": "Medium knotless braids, waist length. Attachments included. Around five hours.", "pricing_type": "fixed", "price_amount": 3000000, "duration_minutes": 300, "service_area": "Atabong Road, Okon" },
+          { "key": "bridal-trial", "category": "hair-beauty", "status": "archived", "title": "Bridal Makeup Trial", "description": "No longer offered.", "pricing_type": "fixed", "price_amount": 2000000, "duration_minutes": 90, "service_area": "Eket Town" }
+        ]
+      },
+      {
+        "slug": "swiftmove-eket",
+        "display_name": "SwiftMove Eket",
+        "bio": "Two vans and a careful crew for apartment moves, shop relocations and single-item deliveries around Eket and Esit Eket.",
+        "service_area": "All of Eket",
+        "phone": "+2348031234505",
+        "latitude": 4.6602,
+        "longitude": 7.9378,
+        "owner": { "email": "swiftmove@example.com", "username": "swiftmove", "first_name": "Ibrahim", "last_name": "Musa" },
+        "listings": [
+          { "key": "apartment-move", "category": "moving", "status": "published", "title": "Apartment Move, Up to 2 Bedrooms", "description": "One van, three movers, wrapping and loading. Moves within Eket and Esit Eket.", "pricing_type": "fixed", "price_amount": 12000000, "duration_minutes": 480, "service_area": "All of Eket" }
+        ]
+      },
+      {
+        "slug": "mr-okafor-maths",
+        "display_name": "Mr Okafor Maths Tutoring",
+        "bio": "WAEC, JAMB and IGCSE maths and further maths. Twelve years teaching; lessons at your home or online.",
+        "service_area": "Idua Road, Eket Town, Online",
+        "phone": "+2348031234506",
+        "latitude": 4.6335,
+        "longitude": 7.9110,
+        "owner": { "email": "okafor@example.com", "username": "okafor", "first_name": "Chidi", "last_name": "Okafor" },
+        "listings": [
+          { "key": "waec-prep", "category": "tutoring", "status": "published", "title": "WAEC Maths Prep, One Hour", "description": "Past-question drills and exam technique for SS2 and SS3 students. At your home or online.", "pricing_type": "hourly", "price_amount": 1000000, "duration_minutes": 60, "service_area": "Idua Road, Eket Town, Online" },
+          { "key": "jamb-intensive", "category": "tutoring", "status": "published", "title": "JAMB Intensive, Four Sessions", "description": "Four two-hour sessions covering the full JAMB maths syllabus with timed mock tests.", "pricing_type": "fixed", "price_amount": 6500000, "duration_minutes": 480, "service_area": "Online" }
+        ]
+      },
+      {
+        "slug": "chef-ima-kitchen",
+        "display_name": "Chef Ima’s Kitchen",
+        "bio": "Private chef for family dinners, small parties and weekly meal prep. Efik and Ibibio classics, continental on request. I shop, cook and clean up.",
+        "service_area": "Eket Town, Afaha Eket, Ikot Ibiok",
+        "phone": "+2348031234507",
+        "latitude": 4.6449,
+        "longitude": 7.9201,
+        "owner": { "email": "chefima@example.com", "username": "chefima", "first_name": "Imaobong", "last_name": "Udo" },
+        "listings": [
+          { "key": "dinner-party", "category": "private-chef", "status": "published", "title": "Dinner Party for Up to 10 Guests", "description": "Three-course menu planned with you, shopping, cooking at your home and kitchen clean-up. Ingredients billed at cost.", "pricing_type": "fixed", "price_amount": 4000000, "duration_minutes": 300, "service_area": "Eket Town, Afaha Eket" },
+          { "key": "meal-prep", "category": "private-chef", "status": "published", "title": "Weekly Meal Prep, 5 Days", "description": "Soups, stews and lunches for five days, portioned and labelled in your containers. Includes afang, edikang ikong or your choice.", "pricing_type": "fixed", "price_amount": 3500000, "duration_minutes": 240, "service_area": "Eket Town, Ikot Ibiok" }
+        ]
+      },
+      {
+        "slug": "mama-grace-homecare",
+        "display_name": "Mama Grace Home Care",
+        "bio": "Trusted domestic help for busy homes: daily chores, cooking basics, errands and after-school minding. Vetted, references available.",
+        "service_area": "Atabong Road, Eket Town, Okon",
+        "phone": "+2348031234508",
+        "latitude": 4.651,
+        "longitude": 7.9235,
+        "owner": { "email": "mamagrace@example.com", "username": "mamagrace", "first_name": "Grace", "last_name": "Akpan" },
+        "listings": [
+          { "key": "daily-help", "category": "domestic-help", "status": "published", "title": "Daily Domestic Help, Half Day", "description": "Sweeping, mopping, dishes, laundry sorting and light cooking. Four hours, morning or afternoon.", "pricing_type": "fixed", "price_amount": 800000, "duration_minutes": 240, "service_area": "Eket Town, Okon" },
+          { "key": "errands", "category": "domestic-help", "status": "published", "title": "Errands and Market Run", "description": "Market shopping, bill payments and pickups around Eket. Billed per hour; goods paid separately.", "pricing_type": "hourly", "price_amount": 250000, "duration_minutes": 60, "service_area": "Eket Town" }
+        ]
+      },
+      {
+        "slug": "fresh-fold-laundry",
+        "display_name": "Fresh Fold Laundry",
+        "bio": "Pickup laundry, washing, ironing and folding. Delicates hand-washed. Back in 48 hours.",
+        "service_area": "Marina Road, Eket Town, Idua",
+        "phone": "+2348031234509",
+        "latitude": 4.6365,
+        "longitude": 7.9262,
+        "owner": { "email": "freshfold@example.com", "username": "freshfold", "first_name": "Uduak", "last_name": "Essien" },
+        "listings": [
+          { "key": "wash-fold", "category": "laundry", "status": "published", "title": "Wash, Iron and Fold, 1 Big Bag", "description": "Pickup and drop-off included. About 25 items: shirts, trousers, bedsheets.", "pricing_type": "fixed", "price_amount": 600000, "duration_minutes": null, "service_area": "Eket Town, Idua" },
+          { "key": "home-ironing", "category": "laundry", "status": "published", "title": "Ironing at Your Home", "description": "An ironer comes to you with a board and steam iron. Billed per hour.", "pricing_type": "hourly", "price_amount": 200000, "duration_minutes": 60, "service_area": "Eket Town" }
+        ]
+      },
+      {
+        "slug": "okon-woodworks",
+        "display_name": "Okon Woodworks",
+        "bio": "Carpenter for doors, wardrobes, kitchen cabinets and furniture repairs. Measured quotes; I bring my own tools.",
+        "service_area": "Eket-Oron Road, Ikot Udota, Esit Eket",
+        "phone": "+2348031234510",
+        "latitude": 4.629,
+        "longitude": 7.942,
+        "owner": { "email": "okonwood@example.com", "username": "okonwood", "first_name": "Okon", "last_name": "Etim" },
+        "listings": [
+          { "key": "door-repair", "category": "carpentry", "status": "published", "title": "Door Repair or Rehang", "description": "Fix sagging, sticking or broken doors, hinges and locks. Price covers call-out and the first two hours.", "pricing_type": "fixed", "price_amount": 1200000, "duration_minutes": 120, "service_area": "Eket Town, Ikot Udota" },
+          { "key": "furniture-fix", "category": "carpentry", "status": "published", "title": "Furniture Repair, Per Hour", "description": "Wobbly chairs, broken drawers, bed frames and shelves. Materials billed at cost.", "pricing_type": "hourly", "price_amount": 500000, "duration_minutes": 60, "service_area": "Eket Town, Esit Eket" }
+        ]
+      },
+      {
+        "slug": "colour-pro-painting",
+        "display_name": "Colour Pro Painting",
+        "bio": "Interior and exterior painting with clean edges and covered floors. Paint advice and colour samples free.",
+        "service_area": "Idua Road, Eket Town, Afaha Eket",
+        "phone": "+2348031234511",
+        "latitude": 4.642,
+        "longitude": 7.9155,
+        "owner": { "email": "colourpro@example.com", "username": "colourpro", "first_name": "Effiong", "last_name": "Bassey" },
+        "listings": [
+          { "key": "room-paint", "category": "painting", "status": "published", "title": "Paint One Room, Walls and Ceiling", "description": "Two coats on walls and ceiling of a standard bedroom. Paint supplied by you or bought at cost.", "pricing_type": "fixed", "price_amount": 4500000, "duration_minutes": 480, "service_area": "Eket Town, Afaha Eket" }
+        ]
+      },
+      {
+        "slug": "cool-breeze-ac",
+        "display_name": "Cool Breeze AC Services",
+        "bio": "Split-unit AC servicing, gas refill, installation and fault repair. Same-week visits across Eket.",
+        "service_area": "Grace Bill Road, Eket Town, Idua",
+        "phone": "+2348031234512",
+        "latitude": 4.647,
+        "longitude": 7.93,
+        "owner": { "email": "coolbreeze@example.com", "username": "coolbreeze", "first_name": "Aniekan", "last_name": "Johnson" },
+        "listings": [
+          { "key": "ac-service", "category": "ac-repair", "status": "published", "title": "AC Servicing, Per Unit", "description": "Clean filters and coils, check gas pressure and drainage for one split unit.", "pricing_type": "fixed", "price_amount": 1000000, "duration_minutes": 60, "service_area": "Eket Town, Idua" },
+          { "key": "ac-install", "category": "ac-repair", "status": "published", "title": "Split AC Installation", "description": "Mount indoor and outdoor units, pipe and gas up to 3 metres, test run. You supply the unit.", "pricing_type": "fixed", "price_amount": 3500000, "duration_minutes": 240, "service_area": "Eket Town" }
+        ]
+      }
+    ],
+    "completed_bookings": [
+      { "listing": "dinner-party", "customer": "temi@example.com", "scheduled_for": "2026-09-20T17:00:00Z", "address": "5 Hospital Road, Eket", "latitude": 4.6440, "longitude": 7.9220, "rating": 5, "comment": "The afang soup was the talk of the night. Kitchen left spotless." },
+      { "listing": "meal-prep", "customer": "funke@example.com", "scheduled_for": "2026-09-28T09:00:00Z", "address": "12 Atabong Road, Eket", "latitude": 4.6520, "longitude": 7.9180, "rating": 5, "comment": "A week of proper food in labelled boxes. Booking again." },
+      { "listing": "daily-help", "customer": "ifeoluwa@example.com", "scheduled_for": "2026-09-22T08:00:00Z", "address": "3 Etebi Road, Eket", "latitude": 4.6419, "longitude": 7.9302, "rating": 4, "comment": "Hardworking and careful with my things." },
+      { "listing": "wash-fold", "customer": "segun@example.com", "scheduled_for": "2026-09-18T10:00:00Z", "address": "7 Marina Road, Eket", "latitude": 4.6375, "longitude": 7.9285, "rating": 5, "comment": "Shirts came back crisp and on time." },
+      { "listing": "door-repair", "customer": "david@example.com", "scheduled_for": "2026-09-12T11:00:00Z", "address": "2 Eket-Oron Road, Eket", "latitude": 4.6300, "longitude": 7.9400, "rating": 4, "comment": "Door closes properly now. Came a bit late." },
+      { "listing": "ac-service", "customer": "chiamaka@example.com", "scheduled_for": "2026-09-26T13:00:00Z", "address": "14 Grace Bill Road, Eket", "latitude": 4.6455, "longitude": 7.9241, "rating": 5, "comment": "AC blows cold again. Explained everything he did." },
+      { "listing": "deep-clean", "customer": "chiamaka@example.com", "scheduled_for": "2026-09-09T08:00:00Z", "address": "14 Grace Bill Road, Eket", "latitude": 4.6455, "longitude": 7.9241, "rating": 5, "comment": "Arrived on time and the kitchen looks new. Worth every naira." },
+      { "listing": "deep-clean", "customer": "ifeoluwa@example.com", "scheduled_for": "2026-09-17T08:00:00Z", "address": "3 Etebi Road, Eket", "latitude": 4.6419, "longitude": 7.9302, "rating": 5, "comment": "Thorough, polite, and they cleaned behind the fridge without being asked." },
+      { "listing": "weekly-upkeep", "customer": "bola@example.com", "scheduled_for": "2026-09-24T09:00:00Z", "address": "21 Afaha Eket Road, Eket", "latitude": 4.6566, "longitude": 7.9333, "rating": 4, "comment": "Good weekly service. Started 20 minutes late once." },
+      { "listing": "leak-repair", "customer": "emeka@example.com", "scheduled_for": "2026-08-29T10:00:00Z", "address": "8 Marina Road, Eket", "latitude": 4.6380, "longitude": 7.9290, "rating": 5, "comment": "Fixed a leak two other plumbers missed." },
+      { "listing": "water-heater", "customer": "halima@example.com", "scheduled_for": "2026-09-01T11:00:00Z", "address": "40 Idua Road, Eket", "latitude": 4.6348, "longitude": 7.9166, "rating": 4, "comment": "Clean install. Had to come back for a loose fitting, no extra charge." },
+      { "listing": "inverter", "customer": "segun@example.com", "scheduled_for": "2026-08-11T09:00:00Z", "address": "4 Ikot Udota Street, Eket", "latitude": 4.6281, "longitude": 7.9420, "rating": 5, "comment": "Explained everything and labelled the breakers. Very professional." },
+      { "listing": "fault-finding", "customer": "ngozi@example.com", "scheduled_for": "2026-08-18T09:00:00Z", "address": "10 Eket-Oron Road, Eket", "latitude": 4.6305, "longitude": 7.9398, "rating": 5, "comment": "Found the fault in under an hour." },
+      { "listing": "knotless-braids", "customer": "temi@example.com", "scheduled_for": "2026-09-20T12:00:00Z", "address": "27 Atabong Road, Eket", "latitude": 4.6512, "longitude": 7.9199, "rating": 5, "comment": "Neat braids, gentle hands, finished faster than expected." },
+      { "listing": "waec-prep", "customer": "funke@example.com", "scheduled_for": "2026-06-29T15:00:00Z", "address": "9 Okon Street, Eket", "latitude": 4.6440, "longitude": 7.9135, "rating": 5, "comment": "My son finally understands quadratic equations." },
+      { "listing": "jamb-intensive", "customer": "david@example.com", "scheduled_for": "2026-07-13T15:00:00Z", "address": "Online", "rating": 4, "comment": "Strong material; the online sessions sometimes lagged." }
+    ],
+    "open_bookings": [
+      { "listing": "dinner-party", "customer": "chiamaka@example.com", "status": "requested", "scheduled_for": "2026-11-21T17:00:00Z", "address": "14 Grace Bill Road, Eket", "latitude": 4.6455, "longitude": 7.9241, "notes": "Birthday dinner for 8. One guest is vegetarian." },
+      { "listing": "room-paint", "customer": "halima@example.com", "status": "requested", "scheduled_for": "2026-11-18T08:00:00Z", "address": "40 Idua Road, Eket", "latitude": 4.6348, "longitude": 7.9166, "notes": "Light grey for the walls, white ceiling." },
+      { "listing": "deep-clean", "customer": "bola@example.com", "status": "requested", "scheduled_for": "2026-11-14T09:00:00Z", "address": "21 Afaha Eket Road, Eket", "latitude": 4.6566, "longitude": 7.9333, "notes": "Three bedrooms, two bathrooms. Gate code at the door." },
+      { "listing": "weekly-upkeep", "customer": "halima@example.com", "status": "requested", "scheduled_for": "2026-11-16T08:00:00Z", "address": "40 Idua Road, Eket", "latitude": 4.6348, "longitude": 7.9166, "notes": "" },
+      { "listing": "leak-repair", "customer": "chiamaka@example.com", "status": "accepted", "scheduled_for": "2026-11-12T10:00:00Z", "address": "14 Grace Bill Road, Eket", "latitude": 4.6455, "longitude": 7.9241, "notes": "Kitchen sink drips all night." },
+      { "listing": "inverter", "customer": "emeka@example.com", "status": "paid", "scheduled_for": "2026-11-13T09:00:00Z", "address": "8 Marina Road, Eket", "latitude": 4.6380, "longitude": 7.9290, "notes": "Batteries already on site." },
+      { "listing": "knotless-braids", "customer": "ngozi@example.com", "status": "accepted", "scheduled_for": "2026-11-15T12:00:00Z", "address": "10 Eket-Oron Road, Eket", "latitude": 4.6305, "longitude": 7.9398, "notes": "" }
+    ]
+  }
+]

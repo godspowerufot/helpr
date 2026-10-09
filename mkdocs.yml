@@ -1,8 +1,7 @@
-site_name: MSF FastAPI Template
-site_description: Guide to the MSFLib FastAPI starter template
-site_url: https://msflib.github.io/docsite/fastapi-template/
-repo_url: https://github.com/msflib/fastapi-template
-docs_dir: ./docs
+site_name: MSF FastAPI Template Documentation
+site_description: Public docs for the MSF FastAPI starter template
+site_url: https://msflib.github.io/docsite/fastapi-template
+docs_dir: ./openwiki/docs
 site_dir: ./doc-site
 
 theme:
@@ -24,26 +23,19 @@ theme:
     - navigation.instant
     - navigation.tracking
     - navigation.sections
+    - navigation.expand
     - search.suggest
     - search.highlight
-    - content.code.copy
 
 plugins:
   - search
+  - gen_nav:
+      enabled: true
 
 markdown_extensions:
   - admonition
+  - codehilite:
+      guess_lang: false
   - footnotes
   - toc:
       permalink: true
-  - pymdownx.highlight
-  - pymdownx.superfences
-
-nav:
-  - Home: index.md
-  - Getting started: getting-started.md
-  - Configuration: configuration.md
-  - How the app is wired: wiring.md
-  - Database and seeding: database-and-seeding.md
-  - Testing and deployment: testing-and-deployment.md
-  - Extending the template: extending.md
